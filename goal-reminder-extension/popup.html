@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 300px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+    .header {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .goal-input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    .time-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    .time-input {
+      width: 70px;
+      padding: 5px;
+      margin-left: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .frequency-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.frequency-select {
+  width: 100px;
+  padding: 5px;
+  margin-left: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+    .btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    .btn:hover {
+      background-color: #45a049;
+    }
+    .btn-danger {
+      background-color: #f44336;
+    }
+    .btn-danger:hover {
+      background-color: #da190b;
+    }
+    .goal-list {
+      margin-top: 20px;
+    }
+    .goal-item {
+      background-color: #f9f9f9;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .goal-text {
+      flex: 1;
+      margin-right: 10px;
+    }
+    .delete-btn {
+      background-color: #ff4444;
+      color: white;
+      border: none;
+      padding: 5px 8px;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    .status {
+      text-align: center;
+      margin-top: 10px;
+      color: #666;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h2>🎯 Daily Goal Reminder</h2>
+  </div>
+  
+  <div>
+    <input type="text" id="goalInput" class="goal-input" placeholder="Enter your goal here...">
+    
+    <div class="time-container">
+      <label>Reminder time:</label>
+      <input type="time" id="reminderTime" class="time-input" value="09:00">
+    </div>
+
+    <div class="frequency-container">
+  <label>Frequency:</label>
+  <select id="frequency" class="frequency-select">
+    <option value="daily">Daily</option>
+    <option value="weekly">Weekly</option>
+    <option value="monthly">Monthly</option>
+    <option value="yearly">Yearly</option>
+  </select>
+</div>
+    
+    <button id="addGoal" class="btn">Add Goal</button>
+    <button id="testNotification" class="btn">Test Notification</button>
+  </div>
+  
+  <div id="goalList" class="goal-list"></div>
+  
+  <div id="status" class="status"></div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

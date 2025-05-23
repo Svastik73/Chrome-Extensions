@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Daily Goal Reminder",
+  "version": "1.0",
+  "description": "Get daily reminders for your personal goals",
+  "permissions": [
+    "storage",
+    "alarms",
+    "notifications"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Goal Reminder"
+  },
+  "icons": {
+    "16": "png16.jpg",
+    "48": "png48.jpg",
+    "128": "png128.jpg"
+  }
+}
